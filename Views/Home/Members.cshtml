@@ -1,0 +1,21 @@
+﻿@model IEnumerable<LibraryManage.Models.Member>
+
+<h1>Members</h1>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Membership Date</th>
+    </tr>
+    @foreach (var member in Model)
+    {
+        <tr>
+            <td>@member.Name</td>
+            <td>@member.Email</td>
+            <td>@member.Phone</td>
+            <td>@member.MembershipDate.ToString("yyyy-MM-dd")</td>
+        </tr>
+    }
+</table>

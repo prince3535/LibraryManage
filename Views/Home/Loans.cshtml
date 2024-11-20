@@ -1,0 +1,21 @@
+﻿@model IEnumerable<LibraryManage.Models.Loan>
+
+<h1>Loans</h1>
+
+<table>
+    <tr>
+        <th>Book ID</th>
+        <th>Member ID</th>
+        <th>Loan Date</th>
+        <th>Return Date</th>
+    </tr>
+    @foreach (var loan in Model)
+    {
+        <tr>
+            <td>@loan.BookId</td>
+            <td>@loan.MemberId</td>
+            <td>@loan.LoanDate.ToString("yyyy-MM-dd")</td>
+            <td>@loan.ReturnDate.ToString("yyyy-MM-dd")</td>
+        </tr>
+    }
+</table>
